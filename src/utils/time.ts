@@ -8,6 +8,7 @@ export function addMinutes(time: string, minutes: number): string {
     return `${h}:${m}`;
 }
 
+
 export function isTimeBetween(time: string, startTime: string, endTime: string): boolean {
     const timeMinutes = timeToMinutes(time);
     const startMinutes = timeToMinutes(startTime);

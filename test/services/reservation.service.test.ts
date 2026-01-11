@@ -209,7 +209,7 @@ describe('Reservation Service', () => {
                 id: '789',
                 ...reservationData,
                 tableId: '456',
-                duration: 90, // Limited to peak hour max
+                duration: 90, //Limited to only peak hourss
                 endTime: '20:30',
                 status: 'confirmed'
             });

@@ -27,12 +27,13 @@ ps: please ensure mysql is installed and running
 -   `npm run dev`
 
 5. To run tests
-- On another terminal; run -    npm run test
+- On another terminal; run -    `npm run test`
 
 ## API USAGE EXAMPLES
 
 1. Create a Restaurant
 
+```json
 curl -X POST http://localhost:3000/api/restaurants \
   -H "Content-Type: application/json" \
   -d '{
@@ -43,7 +44,8 @@ curl -X POST http://localhost:3000/api/restaurants \
     "peakHourEnd": "21:00",
     "peakHourMaxDuration": 90
   }'
-
+```
+```
  {
   "success": true,
   "message": "Restaurant created successfully",
@@ -54,9 +56,10 @@ curl -X POST http://localhost:3000/api/restaurants \
     "closingTime": "23:00"
   }
 }
+```
 
 1i. Get Restaurants
-
+```
   {
     "success": true,
     "data": [
@@ -80,13 +83,12 @@ curl -X POST http://localhost:3000/api/restaurants \
         }
     ]
   }
+```
 
-1ii. Get Restaurants by id
-
-    
 
 2. Add a table
 
+```
 curl -X POST http://localhost:3000/api/restaurants/tables \
   -H "Content-Type: application/json" \
   -d '{
@@ -106,15 +108,16 @@ curl -X POST http://localhost:3000/api/restaurants/tables \
     "isActive": true
   }
 }
-
+```
 
 
 3. Check Available time slots
 
-curl "http://localhost:3000/api/reservations/available-slots?restaurantId=your-id&date=2026-01-20&partySize=4"
+``` curl "http://localhost:3000/api/reservations/available-slots?restaurantId=your-id&date=2026-01-20&partySize=4" ```
 
 4. Create Reservation
 
+```
 curl -X POST http://localhost:3000/api/reservations \
   -H "Content-Type: application/json" \
   -d '{
@@ -126,8 +129,10 @@ curl -X POST http://localhost:3000/api/reservations \
     "startTime": "18:00",
     "duration": 120
   }'
+```
 
-  {
+ ```
+ {
   "success": true,
   "message": "Reservation created successfully",
   "data": {
@@ -142,9 +147,10 @@ curl -X POST http://localhost:3000/api/reservations \
     "status": "confirmed"
   }
 }
+```
 
 5. Check Availability
-
+```
 curl -X POST http://localhost:3000/api/reservations/check-availability \
   -H "Content-Type: application/json" \
   -d '{
@@ -166,6 +172,7 @@ curl -X POST http://localhost:3000/api/reservations/check-availability \
     }
   }
 }
+```
 
 
 ## FUTURE ENHANCEMENTS

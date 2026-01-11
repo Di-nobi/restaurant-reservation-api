@@ -5,16 +5,16 @@
 
 1. Clone the repository
 
-git clone https://github.com/Di-nobi/restaurant-reservation-api.git
+`git clone https://github.com/Di-nobi/restaurant-reservation-api.git`
 
-cd restaurant-reservation-api
+`cd restaurant-reservation-api`
 
 2. Install dependencies
 
-Run:  npm install
+Run:  `npm install`
 
 ### Database setup
-3. Run: mysql -u root -p < db/setup.sql
+3. Run: `mysql -u root -p < db/setup.sql`
 
 Then copy `.env.example` to `.env` and update the values.
 
@@ -22,9 +22,9 @@ ps: please ensure mysql is installed and running
 
 ## Starting of dev server
 4. To start the dev server, run
--   npm run compile 
+-   `npm run compile` 
 
--   npm run dev
+-   `npm run dev`
 
 5. To run tests
 - On another terminal; run -    npm run test
@@ -44,7 +44,7 @@ curl -X POST http://localhost:3000/api/restaurants \
     "peakHourMaxDuration": 90
   }'
 
-  {
+ {
   "success": true,
   "message": "Restaurant created successfully",
   "data": {
@@ -57,7 +57,7 @@ curl -X POST http://localhost:3000/api/restaurants \
 
 1i. Get Restaurants
 
-    {
+  {
     "success": true,
     "data": [
         {
@@ -79,7 +79,7 @@ curl -X POST http://localhost:3000/api/restaurants \
         ]
         }
     ]
-    }
+  }
 
 1ii. Get Restaurants by id
 
